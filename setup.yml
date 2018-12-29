@@ -15,4 +15,3 @@ services:
     entrypoint: ["/bin/ash", "-c"]
     command: ['cat ./scripts/setup.sh | tr -d "\r" | ash']
 
-    # command: ["./scripts/setup.sh"]
