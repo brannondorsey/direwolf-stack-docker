@@ -93,6 +93,8 @@ services:
         target: /usr/share/logstash/config/certs/ca/ca.crt
     ports: ['5000:5000']
     networks: ['stack']
+    volumes:
+      - '../aprs-logs:/aprs-logs'
     depends_on: ['elasticsearch']
     healthcheck:
       test: bin/logstash -t
